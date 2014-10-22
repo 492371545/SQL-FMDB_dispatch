@@ -7,12 +7,15 @@
 //
 
 #import "AppDelegate.h"
+#import "DBOperation.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    DBOperation *db = [[DBOperation alloc] init];
+    [db createDataBase];
     return YES;
 }
 							
